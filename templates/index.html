@@ -1,0 +1,26 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<title>Review-Scrapping</title>
+
+{% endblock title%}
+
+{% block body %}
+
+
+<div class="container">
+    <form action="/review" id="search" method="POST" class="search-box-div">
+      <legend id="legend">Search Product</legend>
+      <div class="form-group">
+        <input type="text" name="content" class="form-control" id="Searchproduct" aria-describedby="SearchProduct"
+        placeholder="Search Item for Review">
+    </div>
+    <button  type="submit" class="btn btn-primary button" >Search</button>
+  </form>
+</div>
+<h5 class=".text-muted copyright">&copy; Uday</h5>
+
+
+{% endblock body %}
